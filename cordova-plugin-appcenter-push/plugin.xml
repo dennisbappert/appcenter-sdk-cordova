@@ -55,6 +55,7 @@
     </platform>
 
     <platform name="ios">
+        <pods-config deployment-target="9.0" use-frameworks="true"/>
         <config-file target="config.xml" parent="/*">
             <feature name="AppCenterPush">
                 <param name="ios-package" value="AppCenterPushPlugin" />
@@ -84,7 +85,7 @@
 
         <header-file src="src/ios/PushUtils.h" />
         <source-file src="src/ios/PushUtils.m" />
-
-        <framework src="AppCenter/Push" type="podspec" spec="" />
+ 
+        <pod name="AppCenter/Push" version="1.12.0" />
     </platform>
 </plugin>
